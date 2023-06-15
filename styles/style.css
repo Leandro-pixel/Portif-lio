@@ -37,7 +37,7 @@ body {
     margin: 0px 120px ;
 }
 
-/*nav*/
+/*Nav*/
 
 nav {
     display: flex;
@@ -342,19 +342,14 @@ header #introduction {
 }
 
 #project1,
-#project3 {
-    display: flex;
-    gap: 100px;
-    align-items: center;
-    margin-bottom: 150px;
-}
-
+#project3,
 #project2 {
     display: flex;
     gap: 100px;
     align-items: center;
     margin-bottom: 150px;
 }
+
 
 #project1 #cover {
     width: 300px;
@@ -451,7 +446,7 @@ footer h1 {
     margin-bottom: 100px;
 }
 
-.footer-container {
+.footerContainer {
     display: flex;
     justify-content: space-between;
   padding: 0px 100px 100px 100px;
@@ -636,3 +631,234 @@ textarea::-webkit-scrollbar {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
 }
+
+ /* Media Queries */
+
+ @media (max-width: 1000px) {
+
+  .container {
+  margin: 0;
+  padding: 50px;
+}
+
+/*Nav*/
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+
+.menu {
+    background: var(--body-background);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 50px;
+    width: 100%;
+    z-index: 2;
+}
+
+/*introduction*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p {
+  width: 600px;
+}
+
+header #introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  z-index: 1;
+}
+
+.coverLetter {
+  order: 2;
+}
+
+#profile {
+  order: 1;
+  position: relative;
+}
+
+#profile #profilePhoto {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#profile section svg {
+  transform: scale(1.5);
+}
+
+#profile section {
+  margin-top: 15px;
+  display: flex;
+  gap: 35px;
+}
+
+#introduction h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.coverLetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.coverLetter h2 {
+  margin-left: 210px;
+  font-size: 20px;
+}
+
+.coverLetter :nth-child(3) {
+  margin-left: 300px;
+  margin-bottom: 20px;
+}
+
+.coverLetter p {
+  width: 420px;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-bottom: 150px;
+}
+
+#seta { 
+  display: none;
+}
+
+/*technologies*/
+
+#technologies #images {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 200px;
+  gap: 50px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+#javaIcon,
+#htmlIcon,
+#cssIcon {
+  grid-row: 1;
+  width: 80px;
+  height: 80px;
+}
+
+#reactIcon {
+grid-row: 2;
+width: 85px;
+height: 75px;
+
+}
+
+#nodeIcon {
+  grid-row: 2;
+  width: 100px;
+}
+
+/*projects*/
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project1,
+#project3 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+#project2 #Projects-technologies img  {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#project2 .wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+
+#cover {
+  display: none;
+}
+
+
+#projects #gif {
+  width: 400px;
+  height: 250px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+#project2 .wrapper p {
+  width: 400px;
+  margin-right: 0px;
+}
+
+/*footer*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px 0px 0px;
+}
+
+footer form {
+  width: 100%;
+
+}
+
+footer h1 {
+  font-size: 25px;
+}
+
+footer .letter {
+  margin-top: 50px;
+  width: 400px;
+  font-size: 20px;
+}
+
+[data-animeName="letter-name"] {
+  transform: translate3d(0px, -250px, 0px); 
+}
+ }
+
+ @media (max-width: 700px) {
+  
+  header p {
+    width: 600px;
+  }
+   }
+
+ @media (max-width: 500px) {
+  
+header p {
+  width: 400px;
+}
+ }
