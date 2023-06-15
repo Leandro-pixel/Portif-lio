@@ -650,10 +650,11 @@ textarea::-webkit-scrollbar {
     top: 0;
     left: 0;
     width: 100%;
-   
+    background: var(--body-background);
 }
 
 .menu {
+  top: 0;
     background: var(--body-background);
     position: fixed;
     display: flex;
@@ -663,6 +664,8 @@ textarea::-webkit-scrollbar {
     width: 100%;
     z-index: 2;
 }
+
+
 
 /*introduction*/
 
